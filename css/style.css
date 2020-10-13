@@ -48,6 +48,21 @@
   }
 
 
+  .conteudo-loading{
+    margin-bottom: 3rem;
+    height:250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-background-cabecalho);
+    border-radius: 20px 20px;
+    box-shadow: 1px 4px 10px 2px #9f01fab2;
+
+  }
+
+
+
+
 /* visual do cabeçalho e das descrições */
 
   .cabecalho {
@@ -73,6 +88,13 @@
   .list-descricao h1,
   .list-descricao p{
     color:#e90a0ad0;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+  }
+
+  .loading-descricao h1,
+  .loading-descricao p{
+    color:#850ae9;
     margin-top: 0.8rem;
     margin-left: 1rem;
   }
@@ -212,3 +234,45 @@
    {
      width: 50px;
    }
+
+  /* Configuração do Loading */
+   .loading01-circulo{
+     position: relative;
+     width: 100px;
+     height: 100px;
+     background: transparent;
+     border: 3px solid #000000;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 100px;
+     font-family: sans-serif;
+     letter-spacing: 2px;
+     color: #fff;
+     text-transform: uppercase;
+     text-shadow: 0 0 10px #520555;
+     box-shadow: 0 0 20px #520555;
+   }
+   .loading01-circulo::before{
+     content: '';
+     position: absolute;
+     top: -2px;
+     left: -2px;
+     width: 100%;
+     height: 100%;
+     border: 3px solid transparent;
+    border-top: 5px solid #850ae9;
+    border-left: 5px solid #850ae9;
+    border-radius:  50%; 
+    animation: animacaoload01 1s linear infinite;
+    }
+@keyframes animacaoload01
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
